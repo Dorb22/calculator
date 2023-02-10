@@ -42,18 +42,22 @@ body{
     height: 25%;
     background-color: white;
     margin-bottom: 20px;
+    overflow: scroll;
 }
 
 .current{
-    background-color: yellow;
-    font-size: 70px;
+    color: #001D4A;
+    font-size: 50px;
     text-align: end;
+    width: 100%;
+    height: auto;
 }
 
 .past{
-    background-color: aquamarine;
+    color: #006992;
     text-align: end;
     font-size: 40px;
+    width: 100%;
 }
 
 
