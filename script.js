@@ -26,7 +26,7 @@ function operate (operator, num1, num2){
 }
 
 let input = '';
-let num1, num2, oper;
+let num1, num2, oper, answer;
 const num = document.querySelectorAll('.number');
 const numArray = Array.from(num);
 const current = document.querySelector('.current')
@@ -58,11 +58,13 @@ operatorArray.forEach(button => {
 const equals = document.querySelector('.equals');
 equals.addEventListener('click', () => {
     let split = input.split(oper);
-    let answer;
-    if (oper === '+') answer = add(parseInt(split[0]), parseInt(split[1]));
-    else if (oper ==='-') answer = subtract(parseInt(split[0]), parseInt(split[1]));
-    else if (oper === 'x') answer = multiply(parseInt(split[0]), parseInt(split[1]));
-    else if (oper === '÷') answer = divide(parseInt(split[0]), parseInt(split[1]));
+    num1 = parseInt (split[0]);
+    num2 = parseInt (split[1]);
+    if (oper === '+') answer = add(num1, num2);
+    else if (oper ==='-') answer = subtract(num1, num2);
+    else if (oper === 'x') answer = multiply(num1, num2);
+    else if (oper === '÷') answer = divide(num1, num2);
     past.textContent = input;
     current.textContent = answer;
+    input = answer;
 })
