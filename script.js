@@ -41,8 +41,6 @@ numArray.forEach(button =>{
 }
 );
 
-
-
 const operator = document.querySelectorAll('.operator');
 const operatorArray = Array.from(operator);
 
@@ -66,5 +64,12 @@ equals.addEventListener('click', () => {
     else if (oper === '÷') answer = divide(num1, num2);
     past.textContent = input;
     current.textContent = answer;
-    input = answer;
+    input = current.textContent;
 })
+
+const del = document.querySelector('.delete');
+del.addEventListener('click', () =>{
+    let last = input.replace(input[input.length -1], '');
+    input = last;
+    current.textContent = input;
+});
