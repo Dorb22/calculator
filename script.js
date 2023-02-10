@@ -73,3 +73,8 @@ del.addEventListener('click', () =>{
     input = last;
     current.textContent = input;
 });
+
+const clear = document.querySelector('.clear');
+clear.addEventListener('click', () => {
+    input = num1 = num2 = oper = answer = current.textContent = past.textContent = '';
+})
