@@ -163,11 +163,30 @@ introQ.classList.add('introQ');
 introQ.textContent = 'Q';
 
 const title = document.querySelector('.title');
+
+const shorts = document.createElement('div');
+shorts.classList.add('shorts');
+title.appendChild(shorts);
+
 const shortcuts = document.createElement('button');
 shortcuts.classList.add('shortcuts');
 shortcuts.textContent = 'SHORTCUTS';
 title.appendChild(shortcuts);
 
+let j = 0;
+shortcuts.addEventListener('click', () => {
+    ++j;
+    if (j % 2 !== 0){
+        shorts.textContent = 'D: Delete  C: Clear';
+        shortcuts.style.backgroundColor = 'transparent';
+        shortcuts.style.color = '#ffd26a';
+        shortcuts.style.border = '2px double #ffd26a';
+    }
+    else {shorts.textContent = '';
+        shortcuts.style.backgroundColor = '#ffd26a';
+        shortcuts.style.color = 'black';
+        shortcuts.style.borderStyle = 'none';}
+})
 
 const on = document.querySelector('.on');
 let i = 0;
@@ -193,3 +212,4 @@ on.addEventListener('click', () => {
         display.appendChild(introQ);
     }
 })
+
