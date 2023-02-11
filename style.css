@@ -40,9 +40,11 @@ body{
     background-color: #EAF8BF;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    gap: 30px;
 }
 
 .calculator{
@@ -88,6 +90,10 @@ body{
     height: 25px;
     margin-top: -8px;
     filter: drop-shadow(0px 0px 5px black);
+}
+
+.shortcuts:hover{
+    background-color: #ebbd52;
 }
 
 .display{
@@ -154,6 +160,10 @@ body{
     padding-left: 10px;
 }
 
+.button:hover{
+    background-color: #cbf0ff;
+}
+
 .number{
     font-size: 40px;
     width: 28%;
@@ -170,6 +180,10 @@ body{
     padding: 15px 0 0 8px;
 }
 
+.number:hover{
+    background-color: #ffd779;
+}
+
 .dot{
     font-family: serif;
     font-weight: 700;
@@ -181,6 +195,10 @@ body{
     width: 16%;
     border-radius: 5%;
     font-weight: 500;
+}
+
+.operator:hover{
+    background-color: #6ac7ec;
 }
 
 .row1,
@@ -197,6 +215,10 @@ body{
     height: 40px;
 }
 
+.on:hover{
+    background-color: #ca8d00;
+}
+
 .equals{
     background-color: #006992;
     color: white;
@@ -206,6 +228,10 @@ body{
     filter: drop-shadow(0px 0px 5px black);
     border-style: none;
     border-radius: 5%;
+}
+
+.equals:hover{
+    background-color: #045778;
 }
 
 .plus,
@@ -275,6 +301,6 @@ body{
 .shorts{
     font-family: Calculator;
     color: white;
-    font-size: 20px;
-    margin: -7px 0 0 55px;
+    font-size: 15px;
+    margin: -4px 0 0 20px;
 }

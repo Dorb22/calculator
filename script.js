@@ -177,7 +177,7 @@ let j = 0;
 shortcuts.addEventListener('click', () => {
     ++j;
     if (j % 2 !== 0){
-        shorts.textContent = 'D: Delete  C: Clear';
+        shorts.textContent = 'D: Delete  C: Clear Enter: =';
         shortcuts.style.backgroundColor = 'transparent';
         shortcuts.style.color = '#ffd26a';
         shortcuts.style.border = '2px double #ffd26a';
