@@ -64,6 +64,11 @@ const equals = document.querySelector('.equals');
 equals.addEventListener('click', getAnswer);
 
 function getAnswer(){
+    if (!oper){
+        past.textContent = input;
+        current.textContent = '';
+    }
+    else{
     let split = input.split(oper);
     num1 = Number(split[0]);
     num2 = Number(split[1]);
@@ -75,6 +80,7 @@ function getAnswer(){
     current.textContent = (Math.round(answer * 10 ** 9))/10 ** 9;
     input = current.textContent;
     oper = '';
+    }
 }
 
 const del = document.querySelector('.delete');
