@@ -89,3 +89,56 @@ clear.addEventListener('click', () => {
     input = num1 = num2 = oper = answer = current.textContent = past.textContent = '';
 })
 
+
+window.addEventListener('keypress', (event) => {
+    if (event.key === '+' || event.key === '-' || event.key === 'x' || event.key === '÷') {
+        if (oper) {
+            getAnswer();
+            oper = event.key;
+            input += event.key;
+            current.textContent = input;
+        }
+            else{
+            oper = event.key;
+            input += event.key;
+            current.textContent = input;
+        }
+    }
+    else if (event.key === '/'){
+        if (oper) {
+            getAnswer();
+            oper = '÷';
+            input += '÷';
+            current.textContent = input;
+        }
+            else{
+            oper = '÷';
+            input += '÷';
+            current.textContent = input;
+        }
+        
+    }
+    else if (event.key === '=' || event.key === 'Enter'){
+        getAnswer();
+    }
+    else if (event.key === '.'){
+        input += event.key;
+        current.textContent = input;
+    }
+    else if (event.key === 'c'){
+        input = num1 = num2 = oper = answer = current.textContent = past.textContent = '';
+    }
+    else if (isNaN(event.key));
+    else {
+        input += event.key;
+        current.textContent = input;
+    }
+});
+
+window.addEventListener('keydown', (event)=>{
+    if (event.key === 'Backspace') {
+        let last = input.replace(input[input.length -1], '');
+        input = last;
+        current.textContent = input;
+    }
+})
