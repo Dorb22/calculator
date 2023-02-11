@@ -111,6 +111,7 @@ body{
 .current{
     color: #001D4A;
     font-size: 50px;
+    font-family: Calculator;
     text-align: end;
     width: 100%;
     height: auto;
@@ -120,6 +121,7 @@ body{
     color: #006992;
     text-align: end;
     font-size: 40px;
+    font-family: Calculator;
     width: 100%;
 }
 
