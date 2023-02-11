@@ -162,6 +162,13 @@ const introQ = document.createElement('div');
 introQ.classList.add('introQ');
 introQ.textContent = 'Q';
 
+const title = document.querySelector('.title');
+const shortcuts = document.createElement('button');
+shortcuts.classList.add('shortcuts');
+shortcuts.textContent = 'SHORTCUTS';
+title.appendChild(shortcuts);
+
+
 const on = document.querySelector('.on');
 let i = 0;
 on.addEventListener('click', () => {
@@ -171,10 +178,18 @@ on.addEventListener('click', () => {
         display.appendChild(introCAL);
         display.appendChild(introQ);
         on.style.fontSize = '10px';
+        introQ.addEventListener('animationend', () => {
+            display.removeChild(introCAL);
+            display.removeChild(introQ);
+            display.appendChild(past);
+            display.appendChild(current);
+        }, {once : true});
     }
     else {
         on.textContent = 'ON';
-        display.removeChild(introCAL);
-        display.removeChild(introQ);
+        display.removeChild(past);
+        display.removeChild(current);
+        display.appendChild(introCAL);
+        display.appendChild(introQ);
     }
 })
