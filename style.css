@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'Calculator';
+    src: url(fonts/Calculator.ttf);
+}
+
+@font-face {
+    font-family: 'Cubic';
+    src: url(fonts/cubic.ttf);
+}
+
+@font-face {
+    font-family: 'Frostbite';
+    src: url(fonts/FROSTBITE-Narrow.ttf);
+    font-weight: normal;
+    font-stretch: narrower;
+}
+
+@font-face {
+    font-family: 'Frostbite';
+    src: url(fonts/FROSTBITE-Narrow\ Bold.ttf);
+    font-weight: bold;
+    font-stretch: narrower;
+}
+
+@font-face {
+    font-family: 'Frostbite';
+    src: url(fonts/FROSTBITE-Wide.ttf);
+    font-weight: normal;
+    font-stretch: wider;
+}
+
+@font-face {
+    font-family: 'Frostbite';
+    src: url(fonts/FROSTBITE-Wide\ Bold.ttf);
+    font-weight: bold;
+    font-stretch: wider;
+}
+
 body{
     background-color: #EAF8BF;
     height: 100vh;
@@ -32,6 +70,7 @@ body{
 .name{
     color: #ECA400;
     font-size: 30px;
+    font-family: Cubic;
 }
 
 .display{
@@ -66,8 +105,13 @@ body{
     display: flex;
     width: 95%;
     height: 10%;
-    gap: 5px;
+    gap: 10px;
     justify-content: end;
+}
+
+.on{
+    height: 40px;
+    width: 40px;
 }
 
 .buttons{
@@ -80,10 +124,17 @@ body{
 
 .button{
     height: 40px;
-    width: 70px;
+    width: fit-content;
     border-radius: 50%;
     border-style: none;
     filter: drop-shadow(0px 0px 5px black);
+    font-family: Frostbite;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6px;
+    padding-left: 10px;
 }
 
 .number{
@@ -93,12 +144,26 @@ body{
     filter: drop-shadow(0px 0px 5px black);
     border-style: none;
     border-radius: 5%;
+    font-family: Frostbite;
+    font-stretch: wider;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 0 8px;
+}
+
+.dot{
+    font-family: serif;
+    font-weight: 700;
+
 }
 
 .operator{
     font-size: 40px;
     width: 16%;
     border-radius: 5%;
+    font-weight: 500;
 }
 
 .row1,
@@ -111,6 +176,8 @@ body{
 
 .on{
     background-color: #ECA400;
+    width: 40px;
+    height: 40px;
 }
 
 .equals{
@@ -129,6 +196,18 @@ body{
 .times,
 .divide{
     background-color: #cbf0ff;
+}
+
+.introQ{
+    font-size: 50px;
+    font-family: Cubic;
+}
+
+
+
+.introCAL{
+    font-size: 50px;
+    font-family: Cubic;
 }
 
 

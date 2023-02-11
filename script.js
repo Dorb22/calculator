@@ -148,3 +148,33 @@ window.addEventListener('keydown', (event)=>{
         current.textContent = input;
     }
 })
+
+const display = document.querySelector('.display');
+display.removeChild(current)
+display.removeChild(past);
+
+const introCAL = document.createElement('div');
+introCAL.textContent = 'CAL';
+introCAL.classList.add('introCAL');
+
+
+const introQ = document.createElement('div');
+introQ.classList.add('introQ');
+introQ.textContent = 'Q';
+
+const on = document.querySelector('.on');
+let i = 0;
+on.addEventListener('click', () => {
+    ++i;
+    if (i % 2 !== 0){
+        on.textContent = 'OFF';
+        display.appendChild(introCAL);
+        display.appendChild(introQ);
+        on.style.fontSize = '10px';
+    }
+    else {
+        on.textContent = 'ON';
+        display.removeChild(introCAL);
+        display.removeChild(introQ);
+    }
+})
